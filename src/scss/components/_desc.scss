@@ -1,0 +1,7 @@
+.desc {
+  @include bg;
+  min-height: 1058px;
+  background-image: url('/src/img/bgs/desc-bg.jpg');
+  padding-top: 20px;
+  padding-bottom: 90px;
+}
