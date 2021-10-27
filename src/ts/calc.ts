@@ -1,16 +1,20 @@
 /* eslint-disable no-param-reassign */
 export {};
 
-const leftColor = '#FADE40';
+const leftColor = '#feed23';
 const rightColor = '#ffffff';
 
 const rangeElList = document.querySelectorAll('.js-range');
 
-const rentRange = document.querySelector('.js-rent-range') as HTMLInputElement;
-const trainingRange = document.querySelector(
-  '.js-training-range',
+const pointsRange = document.querySelector(
+  '.js-points-range',
 ) as HTMLInputElement;
-const roomRange = document.querySelector('.js-room-range') as HTMLInputElement;
+const checkRange = document.querySelector(
+  '.js-check-range',
+) as HTMLInputElement;
+const ordersRange = document.querySelector(
+  '.js-orders-range',
+) as HTMLInputElement;
 
 const resultLabelEl = document.querySelector(
   '.js-calc-result',
@@ -18,13 +22,54 @@ const resultLabelEl = document.querySelector(
 
 let result: number;
 
-let personCurrentStep = 2;
-let adultsCurrentStep = 2;
-let kidsCurrentStep = 2;
+let pointsCurrentStep = 2;
+let checkCurrentStep = 4;
+let ordersCurrentStep = 3;
+
+const processEndpointElList = document.querySelectorAll(
+  '.js-points-endpoints .calc__endpoint-dot',
+);
+const checkinEndpointElList = document.querySelectorAll(
+  '.js-check-endpoints .calc__endpoint-dot',
+);
+const workshopEndpointElList = document.querySelectorAll(
+  '.js-orders-endpoints .calc__endpoint-dot',
+);
+
+let currentTab = 0;
+
+const cafeDelRadioBoxEl = document.querySelector('.js-radio-cafe-del');
+const cafeRadioBoxEl = document.querySelector('.js-radio-del');
+
+cafeDelRadioBoxEl?.addEventListener('click', () => {
+  if (currentTab === 0) {
+    return;
+  }
+
+  cafeDelRadioBoxEl.children[0].classList.remove('visually-hidden');
+  cafeDelRadioBoxEl.children[1].classList.add('visually-hidden');
+  cafeRadioBoxEl?.children[0].classList.add('visually-hidden');
+  cafeRadioBoxEl?.children[1].classList.remove('visually-hidden');
+
+  currentTab = 0;
+});
+cafeRadioBoxEl?.addEventListener('click', () => {
+  if (currentTab === 1) {
+    return;
+  }
+  cafeDelRadioBoxEl?.children[0].classList.add('visually-hidden');
+  cafeDelRadioBoxEl?.children[1].classList.remove('visually-hidden');
+  cafeRadioBoxEl.children[0].classList.remove('visually-hidden');
+  cafeRadioBoxEl.children[1].classList.add('visually-hidden');
+
+  currentTab = 1;
+});
 
 const calcResult = () => {
-  result = (Number(rentRange.value) * 4500 + Number(trainingRange.value) * 10500)
-    * Number(roomRange.value);
+  result = (Number(pointsRange.value) * 4500
+      + Number(checkRange.value) * 10500
+      + Number(ordersRange.value) * 10500)
+    * 0.2;
   resultLabelEl.textContent = result.toLocaleString();
   return result;
 };
@@ -45,49 +90,85 @@ rangeElList.forEach(el => {
   )}%, ${rightColor} 100%)`;
 });
 
-rentRange.addEventListener('input', e => {
+pointsRange.addEventListener('input', e => {
   const rangeEl = e.currentTarget as HTMLInputElement;
 
   const steps = (Number(rangeEl.max) - Number(rangeEl.min)) / Number(rangeEl.step);
 
-  personCurrentStep = (Number(rangeEl.value) - Number(rangeEl.min)) / Number(rangeEl.step);
+  const processPrevStep = pointsCurrentStep;
+
+  pointsCurrentStep = (Number(rangeEl.value) - Number(rangeEl.min)) / Number(rangeEl.step);
+
+  if (processPrevStep < pointsCurrentStep) {
+    processEndpointElList[pointsCurrentStep].classList.add(
+      'calc__endpoint-dot_active',
+    );
+  } else {
+    processEndpointElList[processPrevStep].classList.remove(
+      'calc__endpoint-dot_active',
+    );
+  }
 
   rangeEl.style.background = `linear-gradient(to right, ${leftColor} 0%, ${leftColor} ${String(
-    (personCurrentStep / steps) * 100,
+    (pointsCurrentStep / steps) * 100,
   )}%, ${rightColor} ${String(
-    (personCurrentStep / steps) * 100,
+    (pointsCurrentStep / steps) * 100,
   )}%, ${rightColor} 100%)`;
 
   calcResult();
 });
 
-trainingRange.addEventListener('input', e => {
+checkRange.addEventListener('input', e => {
   const rangeEl = e.currentTarget as HTMLInputElement;
 
   const steps = (Number(rangeEl.max) - Number(rangeEl.min)) / Number(rangeEl.step);
 
-  adultsCurrentStep = (Number(rangeEl.value) - Number(rangeEl.min)) / Number(rangeEl.step);
+  const checkinPrevStep = checkCurrentStep;
+
+  checkCurrentStep = (Number(rangeEl.value) - Number(rangeEl.min)) / Number(rangeEl.step);
+
+  if (checkinPrevStep < checkCurrentStep) {
+    checkinEndpointElList[checkCurrentStep].classList.add(
+      'calc__endpoint-dot_active',
+    );
+  } else {
+    checkinEndpointElList[checkinPrevStep].classList.remove(
+      'calc__endpoint-dot_active',
+    );
+  }
 
   rangeEl.style.background = `linear-gradient(to right, ${leftColor} 0%, ${leftColor} ${String(
-    (adultsCurrentStep / steps) * 100,
+    (checkCurrentStep / steps) * 100,
   )}%, ${rightColor} ${String(
-    (adultsCurrentStep / steps) * 100,
+    (checkCurrentStep / steps) * 100,
   )}%, ${rightColor} 100%)`;
 
   calcResult();
 });
 
-roomRange.addEventListener('input', e => {
+ordersRange.addEventListener('input', e => {
   const rangeEl = e.currentTarget as HTMLInputElement;
 
   const steps = (Number(rangeEl.max) - Number(rangeEl.min)) / Number(rangeEl.step);
 
-  kidsCurrentStep = (Number(rangeEl.value) - Number(rangeEl.min)) / Number(rangeEl.step);
+  const workshopPrevStep = ordersCurrentStep;
+
+  ordersCurrentStep = (Number(rangeEl.value) - Number(rangeEl.min)) / Number(rangeEl.step);
+
+  if (workshopPrevStep < ordersCurrentStep) {
+    workshopEndpointElList[ordersCurrentStep].classList.add(
+      'calc__endpoint-dot_active',
+    );
+  } else {
+    workshopEndpointElList[workshopPrevStep].classList.remove(
+      'calc__endpoint-dot_active',
+    );
+  }
 
   rangeEl.style.background = `linear-gradient(to right, ${leftColor} 0%, ${leftColor} ${String(
-    (kidsCurrentStep / steps) * 100,
+    (ordersCurrentStep / steps) * 100,
   )}%, ${rightColor} ${String(
-    (kidsCurrentStep / steps) * 100,
+    (ordersCurrentStep / steps) * 100,
   )}%, ${rightColor} 100%)`;
 
   calcResult();

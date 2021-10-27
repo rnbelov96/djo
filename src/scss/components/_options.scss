@@ -1,0 +1,152 @@
+.options {
+  min-height: 1030px;
+  @include bg;
+  background-image: url('/src/img/bgs/options-bg.jpg');
+  padding-top: 70px;
+  color: white;
+
+  @media (max-width: 991px) {
+    padding-top: 50px;
+  }
+
+  @media (max-width: 767px) {
+    padding-top: 30px;
+  }
+}
+
+.options__title {
+  @include title;
+  color: white;
+  margin-bottom: 35px;
+
+  @media (max-width: 650px) {
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 910px) {
+    br {
+      display: none;
+    }
+  }
+
+  span {
+    color: black;
+    background-color: $yellow;
+  }
+}
+
+.options__list {
+  @include reset-list;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.options__item {
+  @include max-width(380px);
+
+  @media (max-width: 1150px) {
+    margin-bottom: 30px;
+  }
+
+  &:nth-child(1) {
+    .options__item-content {
+      @media (max-width: 820px) {
+        border-right: 3px dotted white;
+      }
+    }
+  }
+
+  &:nth-child(2) {
+    .options__item-content {
+      @media (max-width: 1150px) {
+        border-right: 3px dotted white;
+      }
+    }
+  }
+
+  &:last-child {
+    .options__item-content {
+      border-right: 3px dotted white;
+    }
+  }
+}
+
+.options__item-number {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 44px;
+  color: #fce900;
+  border: solid 1px #fde900;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+
+  @media (max-width: 650px) {
+    margin-bottom: 15px;
+  }
+}
+
+.options__item-title {
+  text-align: center;
+  font-size: 23px;
+  font-weight: bold;
+  color: $yellow;
+  margin-bottom: 25px;
+
+  @media (max-width: 650px) {
+    margin-bottom: 15px;
+  }
+}
+
+.options__item-content {
+  padding-left: 14px;
+  padding-right: 18px;
+  padding-top: 5px;
+  min-height: 601px;
+  border-left: 3px dotted white;
+
+  @media (max-width: 820px) {
+    min-height: auto;
+  }
+}
+
+.options__item-text-box {
+  min-height: 474px;
+  margin-bottom: 15px;
+
+  @media (max-width: 820px) {
+    min-height: auto;
+  }
+}
+
+.options__item-text {
+  font-size: 18px;
+  margin-bottom: 13px;
+}
+
+.options__item-list {
+  list-style-type: disc;
+  padding-left: 18px;
+}
+
+.options__item-item {
+  font-size: 18px;
+  margin-bottom: 13px;
+}
+
+.options__item-note {
+  text-align: center;
+  font-weight: 23;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: $yellow;
+
+  &_last {
+    margin-bottom: 0;
+  }
+}
