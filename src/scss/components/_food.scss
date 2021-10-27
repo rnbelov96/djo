@@ -1,0 +1,167 @@
+.food {
+  min-height: 572px;
+}
+
+.food__content {
+  @include max-width(765px);
+  background-color: #c7b199;
+  padding-top: 31px;
+  padding-bottom: 32px;
+  padding-left: 37px;
+  padding-right: 55px;
+  display: flex;
+  position: relative;
+
+  @media (max-width: 650px) {
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &::before {
+    position: absolute;
+    content: url('/src/img/food-left.jpg');
+    left: -388px;
+    top: 0px;
+
+    @media (max-width: 800px) {
+      content: none;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: url('/src/img/food-right.jpg');
+    right: -768px;
+    top: 0px;
+
+    @media (max-width: 800px) {
+      content: none;
+    }
+  }
+}
+
+.food__left-list {
+  width: 44.5%;
+
+  @media (max-width: 650px) {
+    width: 100%;
+    border-bottom: 3px black dotted;
+    border-right: none;
+  }
+}
+
+.food__list-title {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  max-width: 317px;
+
+  @media (max-width: 767px) {
+    font-size: 19px;
+  }
+}
+
+.food__list {
+  @include reset-list;
+
+  &_fry {
+    @for $i from 1 through 10 {
+      .food__item:nth-child(#{$i})::before {
+        content: url('/src/img/icons/food/#{$i}.svg');
+      }
+    }
+
+    @media (max-width: 650px) {
+      padding-bottom: 15px;
+    }
+  }
+
+  &_pizza {
+    padding-bottom: 15px;
+
+    .food__item::before {
+      content: url('/src/img/icons/food/11.svg');
+    }
+  }
+
+  &_combo {
+    padding-bottom: 15px;
+
+    .food__item::before {
+      content: url('/src/img/icons/food/12.svg');
+    }
+  }
+
+  &_drinks {
+    .food__item:nth-child(1)::before {
+      content: url('/src/img/icons/food/13.svg');
+    }
+    .food__item:nth-child(2)::before {
+      content: url('/src/img/icons/food/14.svg');
+    }
+  }
+}
+
+.food__list-box {
+  padding-left: 34px;
+  border-bottom: 3px dotted black;
+
+  @media (max-width: 650px) {
+    padding-left: 0;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &_pizza {
+    @media (max-width: 650px) {
+      padding-top: 15px;
+    }
+  }
+
+  &_combo {
+    padding-top: 15px;
+  }
+
+  &_drinks {
+    padding-top: 15px;
+  }
+}
+
+.food__item {
+  padding-left: 42px;
+  font-size: 18px;
+  margin-bottom: 20px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.food__right-side {
+  width: 55.5%;
+
+  @media (max-width: 650px) {
+    width: 100%;
+  }
+}

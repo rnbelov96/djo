@@ -1,0 +1,179 @@
+.market {
+  min-height: 991px;
+  @include bg;
+  background-image: url('/src/img/bgs/market-bg.jpg');
+  padding-bottom: 50px;
+
+  @media (max-width: 991px) {
+    background-color: #ceb397;
+    background-image: none;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    min-height: auto;
+  }
+}
+
+.market__title {
+  @include title;
+  text-align: right;
+  margin-bottom: 38px;
+
+  span {
+    color: white;
+    background-color: black;
+  }
+
+  @media (max-width: 991px) {
+    text-align: left;
+
+    br {
+      display: none;
+    }
+  }
+}
+
+.market__content {
+  @include max-width(572px);
+  margin-left: auto;
+  position: relative;
+
+  @media (max-width: 991px) {
+    margin-left: 0;
+    margin-right: auto;
+    max-width: 100%;
+  }
+
+  &::before {
+    content: url('/src/img/market-moto.png');
+    left: -943px;
+    top: -99px;
+    position: absolute;
+    z-index: -1;
+
+    @media (max-width: 991px) {
+      content: none;
+    }
+  }
+}
+
+.market__subtitle {
+  @include max-width(505px);
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 30px;
+
+  @media (max-width: 991px) {
+    max-width: 100%;
+  }
+
+  @media (max-width: 650px) {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+}
+
+.market__list {
+  @include max-width(500px);
+  @include reset-list;
+  margin-bottom: 36px;
+
+  @media (max-width: 991px) {
+    max-width: 100%;
+  }
+
+  @media (max-width: 650px) {
+    margin-bottom: 25px;
+  }
+}
+
+.market__item {
+  margin-bottom: 20px;
+  padding-left: 41px;
+  position: relative;
+  font-size: 18px;
+
+  @media (max-width: 650px) {
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+
+  &::before {
+    position: absolute;
+    content: url('/src/img/icons/red-white-check.svg');
+    width: 39px;
+    height: 39px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.market__text-title {
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: white;
+  display: inline-block;
+  margin-bottom: 0;
+  font-size: 18px;
+
+  @media (max-width: 650px) {
+    font-size: 16px;
+  }
+}
+
+.market__text {
+  @include max-width(530px);
+  font-size: 18px;
+  margin-bottom: 40px;
+
+  @media (max-width: 991px) {
+    max-width: 100%;
+  }
+
+  @media (max-width: 650px) {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+}
+
+.market__mark {
+  background-color: white;
+  padding-right: 63px;
+  padding-left: 10px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 18px;
+  margin-bottom: 53px;
+
+  @media (max-width: 991px) {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 650px) {
+    font-size: 16px;
+    margin-bottom: 25px;
+    padding-right: 10px;
+  }
+}
+
+.market__text-bottom {
+  @include max-width(483px);
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 37px;
+
+  @media (max-width: 991px) {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 650px) {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+}

@@ -1,0 +1,68 @@
+.menu {
+  min-height: 728px;
+  @include bg;
+  background-image: url('/src/img/bgs/menu-bg.png');
+  padding-top: 210px;
+  padding-bottom: 30px;
+  position: relative;
+  z-index: 1;
+
+  @media (max-width: 767px) {
+    min-height: auto;
+    padding-top: 30px;
+    background-color: $yellow;
+    background-image: none;
+  }
+}
+
+.menu__content {
+  @include max-width(560px);
+  margin-left: auto;
+  position: relative;
+
+  @media (max-width: 767px) {
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  &::before {
+    content: url('/src/img/menu-pizza.png');
+    position: absolute;
+    left: -975px;
+    top: -651px;
+    z-index: -1;
+
+    @media (max-width: 767px) {
+      content: none;
+    }
+  }
+}
+
+.menu__title {
+  @include max-width(525px);
+  @include title;
+  margin-bottom: 27px;
+
+  @media (max-width: 767px) {
+    max-width: 100%;
+
+    br {
+      display: none;
+    }
+  }
+
+  span {
+    color: white;
+    background-color: black;
+  }
+}
+
+.menu__text {
+  font-size: 23px;
+  font-weight: bold;
+  margin-bottom: 0;
+
+  @media (max-width: 650px) {
+    font-size: 18px;
+  }
+}

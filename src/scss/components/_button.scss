@@ -1,23 +1,29 @@
 .button {
   @include reset-btn;
-  font-size: 25px;
-  line-height: 32px;
+  font-size: 24px;
+  line-height: normal;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 7px;
-  padding-right: 7px;
-  text-transform: uppercase;
+  padding-left: 10px;
+  padding-right: 10px;
   color: white;
-  font-weight: 900;
-  background: linear-gradient(180deg, #ffa665 0%, #fc4f19 100%);
-  box-shadow: 0px 6px 0px #cb3300;
-  border-radius: 8px;
+  font-weight: 700;
+  background: linear-gradient(to left, #ff1d25, #ef4e26, #ff1d25);
+  box-shadow: 0px 3px 0px #4c1a03;
+  border-radius: 36px;
   width: 100%;
-  min-height: 92px;
+  min-height: 75px;
   overflow: hidden;
   position: relative;
+  z-index: 1;
+  text-shadow: 1.3px 2.6px 3px #000;
+
+  @media (max-width: 650px) {
+    font-size: 17px;
+    min-height: 55px;
+  }
 
   &:hover {
     background: #fc4f19;
@@ -87,4 +93,52 @@
       margin-left: 80px;
     }
   }
+}
+
+.button__wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 341px;
+
+  &_desc {
+    display: none;
+    @media (max-width: 650px) {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &_market {
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &_modal-form {
+    max-width: 319px;
+    margin-top: 55px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    button {
+      font-size: 20px;
+
+      @media (max-width: 650px) {
+        font-size: 17px;
+      }
+    }
+  }
+}
+
+.button__bg {
+  width: 105%;
+  height: 122%;
+  background-color: #ff1d25;
+  opacity: 0.3;
+  position: absolute;
+  @include central-align;
+  z-index: 0;
+  border-radius: 36px;
 }

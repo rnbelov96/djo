@@ -1,0 +1,85 @@
+.exp {
+  padding-top: 91px;
+  position: relative;
+  z-index: 2;
+
+  @media (max-width: 991px) {
+    padding-top: 50px;
+  }
+
+  @media (max-width: 767px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.exp__title {
+  @include title;
+  @include max-width(850px);
+  margin-bottom: 45px;
+
+  @media (max-width: 850px) {
+    br {
+      display: none;
+    }
+  }
+
+  span {
+    color: white;
+    background-color: black;
+  }
+}
+
+.exp__subtitle {
+  @include max-width(530px);
+  font-size: 23px;
+  font-weight: bold;
+  margin-bottom: 36px;
+
+  @media (max-width: 650px) {
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+}
+
+.exp__text-box {
+  padding-top: 44px;
+  padding-bottom: 44px;
+  padding-left: 38px;
+  padding-right: 55px;
+  background-color: #ccc;
+  @include max-width(655px);
+  position: relative;
+
+  &::after {
+    content: url('/src/img/exp-person-1.png');
+    position: absolute;
+    right: -520px;
+    top: -280px;
+    z-index: -1;
+
+    @media (max-width: 991px) {
+      content: none;
+    }
+  }
+
+  @media (max-width: 650px) {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.exp__text {
+  font-size: 18px;
+  margin-bottom: 20px;
+
+  @media (max-width: 650px) {
+    font-size: 18px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

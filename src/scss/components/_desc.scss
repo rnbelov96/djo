@@ -4,4 +4,83 @@
   background-image: url('/src/img/bgs/desc-bg.jpg');
   padding-top: 20px;
   padding-bottom: 90px;
+  color: white;
+
+  @media (max-width: 650px) {
+    padding-top: 5px;
+    min-height: auto;
+    padding-bottom: 30px;
+    background-size: initial;
+  }
+}
+
+.desc__title {
+  @include title;
+  @include max-width(963px);
+  margin-bottom: 50px;
+  margin-top: 55px;
+  line-height: 1.2;
+
+  @media (max-width: 650px) {
+    font-size: 19px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  span {
+    color: $yellow;
+  }
+}
+
+.desc__text {
+  @include max-width(720px);
+  font-size: 23px;
+  margin-bottom: 56px;
+
+  @media (max-width: 650px) {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+}
+
+.desc__list {
+  @include reset-list;
+}
+
+.desc__item {
+  padding-left: 45px;
+  margin-bottom: 10px;
+  font-size: 19px;
+  font-weight: bold;
+  position: relative;
+
+  @media (max-width: 650px) {
+    font-size: 14px;
+  }
+
+  &::before {
+    content: url('/src/img/icons/yellow-check.svg');
+    width: 39px;
+    height: 39px;
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &:last-child {
+    margin-bottom: 15px;
+  }
+}
+
+.desc__note {
+  @include max-width(860px);
+  font-size: 19px;
+  font-weight: bold;
+  margin-bottom: 55px;
+
+  @media (max-width: 650px) {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
 }
