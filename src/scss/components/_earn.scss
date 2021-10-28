@@ -45,6 +45,30 @@
   padding-top: 13px;
   padding-bottom: 13px;
   display: flex;
+  box-shadow: -2px 2.3px 13px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+
+  &::before {
+    content: url('/src/img/earn-leaf.png');
+    position: absolute;
+    bottom: -100px;
+    left: -113px;
+    
+    @media (max-width: 991px) {
+      content: none;
+    }
+  }
+
+  &::after {
+    content: url('/src/img/earn-sous.png');
+    position: absolute;
+    top: -333px;
+    right: -132px;
+    
+    @media (max-width: 991px) {
+      content: none;
+    }
+  }
 
   @media (max-width: 991px) {
     flex-direction: column;

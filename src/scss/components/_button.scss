@@ -100,6 +100,19 @@
   width: 100%;
   max-width: 341px;
 
+  &_leaf {
+    &::before {
+      content: url('/src/img/feedback-leaf.png');
+      position: absolute;
+      top: -161px;
+      right: -102px;
+
+      @media (max-width: 1150px) {
+        content: none;
+      }
+    }
+  }
+
   &_desc {
     display: none;
     @media (max-width: 650px) {
