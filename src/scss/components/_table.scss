@@ -1,0 +1,124 @@
+.table {
+  padding-top: 60px;
+
+  @media (max-width: 1150px) {
+    padding-bottom: 30px;
+  }
+
+  @media (max-width: 767px) {
+    padding-top: 30px;
+  }
+}
+
+.table__title {
+  font-size: 23px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #aa3200;
+  margin-bottom: 48px;
+  position: relative;
+
+  &::before {
+    content: url('/src/img/table-human.png');
+    position: absolute;
+    left: -387px;
+    top: -552px;
+    z-index: -1;
+
+    @media (max-width: 1150px) {
+      content: none;
+    }
+  }
+
+  @media (max-width: 991px) {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 650px) {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+}
+
+.table__table {
+  @media (max-width: 650px) {
+    display: none;
+  }
+
+  &_small {
+    display: none;
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 650px) {
+      display: block;
+    }
+    .table__cell {
+      width: 50%;
+    }
+  }
+}
+
+.table__row {
+  display: flex;
+  margin-bottom: 5px;
+  min-height: 90px;
+
+  &_head .table__cell {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border-right: none;
+
+    @media (max-width: 991px) {
+      font-size: 14px;
+    }
+  }
+}
+
+.table__cell {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 11px;
+  font-size: 18px;
+  width: 25%;
+  border-right: 3px solid white;
+  background-color: #e6e6e6;
+
+  @media (max-width: 991px) {
+    font-size: 16px;
+  }
+
+  &:first-child {
+    text-align: left;
+    justify-content: flex-start;
+  }
+
+  &:last-child {
+    border-right: none;
+  }
+
+  &_note {
+    flex-direction: column;
+  }
+
+  span {
+    position: relative;
+
+    &::after {
+      width: 20px;
+      height: 20px;
+      content: url('/src/img/icons/important.svg');
+      right: -25px;
+      top: 50%;
+      transform: translateY(-50%);
+      position: absolute;
+    }
+  }
+}
