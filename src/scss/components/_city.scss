@@ -1,0 +1,118 @@
+.city {
+  min-height: 1176px;
+  @include bg;
+  background-image: url('/src/img/bgs/city-bg.jpg');
+  padding-top: 130px;
+  padding-bottom: 40px;
+
+  @media (max-width: 991px) {
+    padding-top: 50px;
+    padding-bottom: 0;
+  }
+
+  @media (max-width: 767px) {
+    padding-top: 30px;
+    padding-bottom: 0;
+  }
+}
+
+.city__title {
+  @include title;
+  margin-bottom: 35px;
+
+  span {
+    color: $yellow;
+    background-color: black;
+  }
+
+  @media (max-width: 1075px) {
+    br {
+      display: none;
+    }
+  }
+}
+
+.city__content {
+  @include max-width(641px);
+  margin-left: auto;
+  position: relative;
+
+  @media (max-width: 991px) {
+    margin-right: auto;
+  }
+}
+
+.city__text {
+  text-align: center;
+  font-size: 23px;
+  font-weight: bold;
+  margin-bottom: 50px;
+  @include max-width(570px);
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (max-width: 650px) {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+}
+
+.city__policy {
+  margin-left: 35px;
+  padding-left: 46px;
+  font-size: 14px;
+  margin-bottom: 0;
+  @include max-width(485px);
+  line-height: 1.5;
+  position: relative;
+  color: black;
+  margin-top: 38px;
+
+  @media (max-width: 650px) {
+    font-size: 11px;
+    margin-top: 20px;
+    margin-left: 0;
+  }
+
+  &::before {
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    content: url('/src/img/icons/form/check.svg');
+    width: 35px;
+    height: 35px;
+  }
+
+  button {
+    @include reset-btn;
+    color: black;
+    font-size: 14px;
+
+    @media (max-width: 650px) {
+      font-size: 11px;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: black;
+      text-decoration: underline;
+    }
+  }
+}
+
+.city__owner {
+  position: absolute;
+  left: -580px;
+  top: 24px;
+  z-index: -1;
+
+  @media (max-width: 991px) {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    margin-top: 20px;
+    width: 100%;
+  }
+}

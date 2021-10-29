@@ -5,11 +5,11 @@ const openedModalList: Element[] = [];
 
 const modalFormInfoList = [
   {
-    title: 'на бесплатную консультацию',
+    title: 'Оставьте заявку на бесплатную консультацию',
     button: 'Получить консультацию',
   },
   {
-    title: 'на презентацию франшизы и финансовую модель',
+    title: 'Оставьте заявку на презентацию франшизы и финансовую модель',
     button: 'Получить презентацию',
   },
 ];
@@ -90,10 +90,4 @@ presentBtnElList.forEach(btn => {
     formBtnEl.textContent = modalFormInfoList[1].button;
     openModal(formModalEl as HTMLDivElement);
   });
-});
-
-const youtubeAdvBtnCallEl = document.querySelector('.js-youtube-adv');
-youtubeAdvBtnCallEl?.addEventListener('click', () => {
-  openedModalList.unshift(youtubeAdvModalEl);
-  openModal(youtubeAdvModalEl as HTMLDivElement);
 });

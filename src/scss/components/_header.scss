@@ -38,6 +38,10 @@
   align-items: center;
   position: relative;
 
+  &:hover::before {
+    transform: rotate(10deg) translateY(-50%);
+  }
+
   @media (max-width: 650px) {
     padding-left: 43px;
   }
@@ -50,6 +54,7 @@
     left: 0px;
     top: 50%;
     transform: translateY(-50%);
+    transition: all 0.5s;
 
     @media (max-width: 650px) {
       width: 34px;

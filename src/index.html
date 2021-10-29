@@ -218,7 +218,7 @@
               рынок.
             </p>
             <div class="button__wrapper button__wrapper_market">
-              <button class="button">Получить информацию</button>
+              <button class="button js-present">Получить информацию</button>
             </div>
           </div>
         </div>
@@ -1093,17 +1093,176 @@
           </div>
         </div>
       </section>
+
+      <section class="city">
+        <div class="container">
+          <h2 class="city__title">
+            Откройте бизнес в «вечной» нише, <br />
+            а <span>команда «Джо» вас в этом поддержит.</span> <br />
+            Действуйте!
+          </h2>
+          <div class="city__content">
+            <p class="city__text">
+              Заинтересовались или остались вопросы? Получите презентацию о
+              компании и анкету партнёра на почту и без спешки ознакомьтесь с
+              деталями о команде и процессах.
+            </p>
+            <form class="modal-form">
+              <h3 class="modal-form__title">
+                Узнайте подробно о каждом этапе запуска из нашей презентации
+              </h3>
+              <div class="modal-form__input-container">
+                <div class="modal-form__input-box">
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Евгений Паленко"
+                    data-type="name"
+                    class="modal-form__input"
+                  />
+                </div>
+                <div class="modal-form__input-box">
+                  <input
+                    type="text"
+                    name="phone"
+                    placeholder="+7(___)-___-__-__"
+                    data-type="phone"
+                    class="modal-form__input"
+                  />
+                </div>
+                <div class="modal-form__input-box">
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="example@mail.ru"
+                    data-type="email"
+                    class="modal-form__input"
+                  />
+                </div>
+              </div>
+              <div class="button__wrapper button__wrapper_modal-form">
+                <button type="submit" class="button">
+                  Получить презентацию
+                </button>
+                <div class="button__bg"></div>
+              </div>
+            </form>
+            <p class="city__policy">
+              Я подтверждаю, что ознакомлен и даю согласие на обработку
+              персональных данных на условиях и для целей, определяемых
+              <button class="js-policy">Политикой конфиденциальности</button>
+            </p>
+            <img
+              src="./img/owner.png"
+              alt="Фото основателя"
+              class="city__owner"
+            />
+          </div>
+        </div>
+      </section>
     </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer__name-box">
+            <p class="footer__company-name">
+              <b>© «Джо», 2017-2021</b> <br />
+              ИП Е.О. ПАЛЕНКО <br />
+              ИНН 251110085366
+            </p>
+            <p class="footer__city">
+              Россия, г. Уссурийск, <br />
+              Приморский край
+            </p>
+          </div>
+          <div class="footer__center-box">
+            <div class="footer__links-container">
+              <div class="footer__link-box">
+                <img
+                  src="./img/icons/logo.svg"
+                  width="85"
+                  height="52"
+                  alt="Логотип"
+                  class="footer__link-icon"
+                /><a
+                  href=""
+                  target="_blank"
+                  class="footer__link"
+                >Официальный сайт</a>
+              </div>
+              <div class="footer__link-box">
+                <img
+                  src="./img/icons/insta.svg"
+                  width="52"
+                  height="52"
+                  alt="Логотип"
+                  class="footer__link-icon"
+                /><a href="" target="_blank" class="footer__link">Instagram</a>
+              </div>
+              
+            </div>
+            <button class="footer__policy js-policy">
+              Политика конфиденциальности
+            </button>
+          </div>
+          <div class="footer__last-box">
+            <div class="footer__contact-box">
+              <a href="tel:+" class="footer__phone">8 (953) 211-03-11</a
+              ><button class="footer__callback js-callback">
+                бесплатный звонок
+              </button>
+            </div>
+            <a href="" target="_blank" class="footer__franch5"
+              >Упаковка и продвижение <br />
+              франшиз «Франчайзинг5»</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <div class="modal">
       <div class="modal__center-wrapper">
-        <form class="modal-form">
+        <form class="modal-form modal-form_modal">
           <h3 class="modal-form__title">
-            Оставьте заявку <span class="js-modal-form-title"></span>
+            <span class="js-modal-form-title"></span>
           </h3>
-          <button class="button button_modal-form js-modal-form-btn">
-            Получить документацию
-          </button>
+          <div class="modal-form__input-container">
+            <div class="modal-form__input-box">
+              <input
+                type="text"
+                name="name"
+                placeholder="Евгений Паленко"
+                data-type="name"
+                class="modal-form__input"
+              />
+            </div>
+            <div class="modal-form__input-box">
+              <input
+                type="text"
+                name="phone"
+                placeholder="+7(___)-___-__-__"
+                data-type="phone"
+                class="modal-form__input"
+              />
+            </div>
+            <div class="modal-form__input-box">
+              <input
+                type="email"
+                name="email"
+                placeholder="example@mail.ru"
+                data-type="email"
+                class="modal-form__input"
+              />
+            </div>
+          </div>
+          <div class="button__wrapper button__wrapper_modal-form">
+            <button type="submit" class="button js-modal-form-btn">
+              Получить презентацию
+            </button>
+            <div class="button__bg"></div>
+          </div>
           <button
             data-modal-close=""
             class="modal__close"
