@@ -134,6 +134,18 @@
     margin-right: auto;
   }
 
+  &_thanks {
+    max-width: 350px;
+
+    a {
+      &:hover,
+      &:active,
+      &:focus {
+        text-decoration: none;
+      }
+    }
+  }
+
   &_modal-form {
     max-width: 319px;
     margin-top: 55px;

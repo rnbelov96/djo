@@ -3,47 +3,117 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Франшиза «»</title>
+    <title>Франшиза «Джо»</title>
   </head>
   <body class="thanks__body">
-    <section class="thanks__header">
+    <section class="thanks">
+      <header class="thanks__header">
+        <img
+          src="./img/icons/logo.svg"
+          width="228"
+          height="143"
+          alt="Логотип компании"
+          class="thanks__logo"
+        />
+      </header>
+
       <div class="container">
-        <header class="header header_thanks">
-        </header>
+        <h1 class="thanks__title">
+          <span class="thanks__user-name js-name"></span>, благодарим Вас за
+          обращение в компанию «Джо»©
+        </h1>
+        <p class="thanks__text">
+          Для обсуждения сотрудничества мы свяжемся с Вами в ближайшее время.
+        </p>
+        <div class="thanks__time-container">
+          <div class="thanks__time-left-box">
+            <p class="thanks__time-left-text">
+              <b>График работы:</b> <br />
+              с понедельника по пятницу <br />
+              с 10:00 до 19:00 по нашему местному времени в г. Уссурийск <br />
+              с 3:00 до 10:00 по московскому времени
+            </p>
+          </div>
+          <div class="thanks__time-right-box">
+            <p class="thanks__time-right-text">
+              Если Вы оставили заявку в нерабочее время <br />
+              или в выходной/праздничный день — <br />
+              мы перезвоним Вам в ближайший рабочий день.
+            </p>
+          </div>
+        </div>
+
+        <div class="thanks__links-box">
+          <div class="button__wrapper button__wrapper_thanks">
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfJs-uCTHlcSwOdhXHgVUjAPc4FDojN9D9CrGcHPKtsm2E7EQ/viewform?usp=send_form"
+              target="_blank"
+            >
+              <button type="submit" class="button">Анкета партнёра</button></a
+            >
+            <div class="button__bg"></div>
+          </div>
+
+          <a href="/" class="thanks__main-link">Вернуться на главную</a>
+        </div>
       </div>
     </section>
-    <section class="thanks">
-      <div class="thanks__content">
-        <div class="container">
-          <div class="thanks__content-wrapper">
-            <div class="thanks__content-box">
-              <h1 class="thanks__title">
-                <span class="thanks__user-name js-name"></span>, НАШИ МЕНЕДЖЕРЫ УЖЕ
-                ЗАНИМАЮТСЯ ВАШЕЙ ЗАЯВКОЙ
-              </h1>
-              <h2 class="thanks__subtitle">
-                Мы свяжемся с Вами в ближайшее время
-              </h2>
-              <div class="thanks__btn-box">
-                <a class="thanks__link" href="doc/mk.pdf">
-                  <div class="button__wrapper button__wrapper">
-                    <button type="button" class="button button_without-logo">
-                      Скачать презентацию
-                    </button>
-                    <div class="button__bg button__bg_thanks"></div>
-                  </div>
-                </a>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer__name-box">
+            <p class="footer__company-name">
+              <b>© «Джо», 2017-2021</b> <br />
+              ИП Е.О. ПАЛЕНКО <br />
+              ИНН 251110085366
+            </p>
+            <p class="footer__city">
+              Россия, г. Уссурийск, <br />
+              Приморский край
+            </p>
+          </div>
+          <div class="footer__center-box">
+            <div class="footer__links-container">
+              <div class="footer__link-box">
+                <img
+                  src="./img/icons/logo.svg"
+                  width="85"
+                  height="52"
+                  alt="Логотип"
+                  class="footer__link-icon"
+                /><a href="" target="_blank" class="footer__link"
+                  >Официальный сайт</a
+                >
+              </div>
+              <div class="footer__link-box">
+                <img
+                  src="./img/icons/insta.svg"
+                  width="52"
+                  height="52"
+                  alt="Логотип"
+                  class="footer__link-icon"
+                /><a href="" target="_blank" class="footer__link">Instagram</a>
               </div>
             </div>
+            <button class="footer__policy js-policy">
+              Политика конфиденциальности
+            </button>
+          </div>
+          <div class="footer__last-box">
+            <div class="footer__contact-box">
+              <a href="tel:+" class="footer__phone">8 (953) 211-03-11</a>
+            </div>
+            <a href="" target="_blank" class="footer__franch5"
+              >Упаковка и продвижение <br />
+              франшиз «Франчайзинг5»</a
+            >
           </div>
         </div>
       </div>
-      <footer class="footer footer_thanks">
-      </footer>
-    </section>
+    </footer>
 
-    <div class="modal">
-    </div>
+    <div class="modal"></div>
 
     <div class="modal">
       <div class="priv-policy priv-policy_modal">
