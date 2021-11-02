@@ -45,3 +45,13 @@
     }
   }
 }
+
+.checkbox-input-error {
+  path {
+    fill: red;
+  }
+}
+
+.checkbox-input-error + p, .checkbox-input-error + p button {
+  color: red !important;
+}

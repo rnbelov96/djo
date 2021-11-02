@@ -57,31 +57,14 @@
   }
 }
 
-.city__policy {
-  margin-left: 35px;
-  padding-left: 46px;
+.city__policy-text {
   font-size: 14px;
   margin-bottom: 0;
-  @include max-width(485px);
   line-height: 1.5;
-  position: relative;
   color: black;
-  margin-top: 38px;
 
   @media (max-width: 650px) {
     font-size: 11px;
-    margin-top: 20px;
-    margin-left: 0;
-  }
-
-  &::before {
-    position: absolute;
-    left: 0px;
-    top: 50%;
-    transform: translateY(-50%);
-    content: url('/src/img/icons/form/check.svg');
-    width: 35px;
-    height: 35px;
   }
 
   button {
@@ -99,6 +82,23 @@
       color: black;
       text-decoration: underline;
     }
+  }
+}
+
+.city__policy {
+  margin-left: 35px;
+  padding-left: 46px;
+  
+  
+  @include max-width(485px);
+ 
+  position: relative;
+  
+  margin-top: 38px;
+
+  @media (max-width: 650px) {
+    margin-top: 20px;
+    margin-left: 0;
   }
 }
 

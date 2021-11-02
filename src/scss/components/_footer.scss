@@ -30,6 +30,10 @@
     text-align: center;
     margin-bottom: 15px;
   }
+
+  @media (max-width: 650px) {
+    font-size: 16px;
+  }
 }
 
 .footer__city {
@@ -37,6 +41,10 @@
   font-size: 18px;
   margin-bottom: 0;
   position: relative;
+
+  @media (max-width: 650px) {
+    font-size: 16px;
+  }
 
   &::before {
     content: url('/src/img/icons/flag.png');
@@ -69,6 +77,10 @@
   font-size: 18px;
   border-bottom: 1px dotted white;
 
+  @media (max-width: 650px) {
+    font-size: 16px;
+  }
+
   &:hover,
   &:focus,
   &:active {
@@ -83,6 +95,10 @@
   font-size: 18px;
   color: white;
   border-bottom: 1px solid transparent;
+
+  @media (max-width: 650px) {
+    font-size: 16px;
+  }
 
   &:hover,
   &:focus,
@@ -141,6 +157,10 @@
   font-size: 18px;
   font-weight: bold;
 
+  @media (max-width: 650px) {
+    font-size: 16px;
+  }
+
   &:hover,
   &:focus,
   &:active {
@@ -156,6 +176,10 @@
   color: white;
   display: block;
   text-decoration: underline;
+
+  @media (max-width: 650px) {
+    font-size: 16px;
+  }
 
   &::before {
     position: absolute;

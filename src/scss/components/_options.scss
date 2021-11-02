@@ -127,6 +127,10 @@
 .options__item-text {
   font-size: 18px;
   margin-bottom: 13px;
+
+  @media (max-width: 650px) {
+    font-size: 16px;
+  }
 }
 
 .options__item-list {
@@ -137,6 +141,10 @@
 .options__item-item {
   font-size: 18px;
   margin-bottom: 13px;
+
+  @media (max-width: 650px) {
+    font-size: 16px;
+  }
 }
 
 .options__item-note {

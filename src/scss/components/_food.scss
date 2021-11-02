@@ -11,6 +11,7 @@
   padding-right: 55px;
   display: flex;
   position: relative;
+  min-height: 572px;
 
   @media (max-width: 650px) {
     flex-direction: column;
@@ -20,7 +21,10 @@
 
   &::before {
     position: absolute;
-    content: url('/src/img/food-left.jpg');
+    content: '';
+    width: 388px;
+    height: 572px;
+    background-image: url('/src/img/food-left.jpg');
     left: -388px;
     top: 0px;
 
@@ -31,7 +35,10 @@
 
   &::after {
     position: absolute;
-    content: url('/src/img/food-right.jpg');
+    content: '';
+    width: 768px;
+    height: 572px;
+    background-image: url('/src/img/food-left.jpg');
     right: -768px;
     top: 0px;
 
@@ -143,6 +150,10 @@
   font-size: 18px;
   margin-bottom: 20px;
   position: relative;
+
+  @media (max-width: 650px) {
+    font-size: 16px;
+  }
 
   &::before {
     position: absolute;

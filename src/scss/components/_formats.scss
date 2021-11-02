@@ -33,6 +33,10 @@
     color: white;
     background-color: black;
   }
+
+  @media (max-width: 650px) {
+    font-size: 20px;
+  }
 }
 
 .formats__text {
@@ -40,7 +44,7 @@
   margin-bottom: 50px;
 
   @media (max-width: 650px) {
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 30px;
   }
 }

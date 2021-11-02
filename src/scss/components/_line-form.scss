@@ -11,8 +11,15 @@
       margin-bottom: 25px;
     }
 
-    .line-form__policy {
+    .line-form__policy,
+    .line-form__policy button {
       color: white;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: white;
+      }
     }
   }
 }
@@ -128,24 +135,27 @@
   }
 }
 
-.line-form__policy {
+.line-form__policy-box {
+  position: relative;
   padding-left: 46px;
+}
+
+.line-form__check-label {
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+.line-form__policy {
   font-size: 14px;
   margin-bottom: 0;
   @include max-width(673px);
   line-height: 1.5;
   position: relative;
   color: black;
-
-  &::before {
-    position: absolute;
-    left: 0px;
-    top: 50%;
-    transform: translateY(-50%);
-    content: url('/src/img/icons/form/check.svg');
-    width: 35px;
-    height: 35px;
-  }
 
   button {
     @include reset-btn;
@@ -159,4 +169,8 @@
       text-decoration: underline;
     }
   }
+}
+
+.line-form__input-check:checked + .line-form__check-label polyline {
+  stroke: white;
 }

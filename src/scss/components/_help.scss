@@ -59,7 +59,7 @@
   margin-bottom: 45px;
 
   @media (max-width: 650px) {
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 20px;
   }
 }
@@ -127,5 +127,9 @@
     bottom: 0;
     max-width: 100%;
     padding: 20px;
+  }
+
+  @media (max-width: 650px) {
+    font-size: 16px;
   }
 }
