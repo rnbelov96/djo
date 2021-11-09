@@ -54,6 +54,12 @@
   span {
     color: white;
     background-color: black;
+    margin-top: 8px;
+    display: inline-block;
+
+    @media (max-width: 650px) {
+      margin-top: 6px;
+    }
   }
 }
 

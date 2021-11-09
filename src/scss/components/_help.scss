@@ -1,7 +1,7 @@
 .help {
   min-height: 1151px;
   @include bg;
-  background-image: url('/src/img/bgs/help-bg.jpg');
+  background-image: url('/src/img/bgs/help-bg-1.png');
   padding-top: 125px;
   padding-bottom: 107px;
 
@@ -107,7 +107,7 @@
   font-weight: bold;
   position: absolute;
   right: -286px;
-  bottom: -107px;
+  bottom: -106px;
   margin-bottom: 0;
 
   &::before {

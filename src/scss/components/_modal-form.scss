@@ -64,7 +64,7 @@
   width: 100%;
   border: none;
   border-bottom: 1px dotted #b3b3b3;
-  color: #808080;
+  color: black;
   font-size: 16px;
   padding-bottom: 6px;
   outline: none;
@@ -77,17 +77,21 @@
 
   &::-webkit-input-placeholder {
     color: #808080;
+    font-style: italic;
   }
 
   &::-moz-placeholder {
     color: #808080;
+    font-style: italic;
   }
 
   &:-ms-input-placeholder {
     color: #808080;
+    font-style: italic;
   }
 
   &:-moz-placeholder {
     color: #808080;
+    font-style: italic;
   }
 }
