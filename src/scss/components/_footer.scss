@@ -3,6 +3,16 @@
   padding-top: 40px;
   padding-bottom: 40px;
   color: white;
+  position: relative;
+  z-index: 1;
+
+  &_main {
+    @media (max-width: 991px) {
+      z-index: 2;
+      top: -18px;
+      margin-bottom: -18px;
+    }
+  }
 
   @media (max-width: 900px) {
     padding-top: 25px;

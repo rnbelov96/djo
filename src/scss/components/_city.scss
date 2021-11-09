@@ -4,6 +4,8 @@
   background-image: url('/src/img/bgs/city-bg.jpg');
   padding-top: 130px;
   padding-bottom: 40px;
+  position: relative;
+  z-index: 2;
 
   @media (max-width: 991px) {
     padding-top: 50px;
@@ -88,12 +90,11 @@
 .city__policy {
   margin-left: 35px;
   padding-left: 46px;
-  
-  
+
   @include max-width(485px);
- 
+
   position: relative;
-  
+
   margin-top: 38px;
 
   @media (max-width: 650px) {
@@ -102,11 +103,15 @@
   }
 }
 
-.city__owner {
+.city__owner-box {
   position: absolute;
-  left: -580px;
-  top: 24px;
+  left: -552px;
+  top: 5px;
   z-index: -1;
+
+  @media (max-width: 1100px) {
+    left: -487px;
+  }
 
   @media (max-width: 991px) {
     position: relative;
@@ -114,5 +119,39 @@
     top: 0px;
     margin-top: 20px;
     width: 100%;
+    max-width: 630px;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.city__owner-caption {
+  width: 254px;
+  height: 254px;
+  background-color: $yellow;
+  position: absolute;
+  font-size: 23px;
+  margin-bottom: 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 14px;
+  bottom: 57px;
+  font-weight: bold;
+  border-radius: 50%;
+
+  @media (max-width: 1200px) {
+    left: 166px;
+  }
+
+  @media (max-width: 650px) {
+    width: 145px;
+    height: 145px;
+    font-size: 16px;
+    left: 62px;
+    bottom: 26px;
   }
 }
