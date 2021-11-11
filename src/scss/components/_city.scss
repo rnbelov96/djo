@@ -101,6 +101,15 @@
     margin-top: 20px;
     margin-left: 0;
   }
+
+  &_modal {
+    margin-left: 0;
+    margin-top: 20px;
+    padding-left: 38px;
+    .city__policy-text {
+      text-align: left;
+    }
+  }
 }
 
 .city__owner-box {

@@ -1,3 +1,10 @@
+.modal-form {
+  &_modal {
+    @include max-width(641px);
+    width: 98%;
+  }
+}
+
 .modal-form__content {
   @include max-width(641px);
   background-color: white;
@@ -13,10 +20,6 @@
     padding-right: 20px;
     padding-bottom: 30px;
     min-height: auto;
-  }
-
-  &_modal {
-    width: 98%;
   }
 }
 
@@ -39,6 +42,10 @@
   align-items: center;
   position: relative;
   margin-bottom: 50px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   @media (max-width: 650px) {
     margin-bottom: 35px;

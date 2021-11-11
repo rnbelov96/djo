@@ -86,19 +86,8 @@
   @include max-width(575px);
   position: relative;
 
-  @media (max-width: 800px) {
+  @media (max-width: 900px) {
     max-width: 100%;
-  }
-
-  &::after {
-    position: absolute;
-    content: url('/src/img/calc-hands.png');
-    right: -958px;
-    top: -52px;
-
-    @media (max-width: 800px) {
-      content: none;
-    }
   }
 }
 
@@ -131,6 +120,10 @@
   font-size: 18px;
   color: white;
   position: relative;
+
+  &_small {
+    width: 10px;
+  }
 
   @media (max-width: 650px) {
     font-size: 13px;
@@ -275,4 +268,30 @@
     align-items: center;
     gap: 0px;
   }
+}
+
+.calc__ipad-box {
+  position: absolute;
+  width: 856px;
+  height: 698px;
+  background-image: url('/src/img/calc-hands.png');
+  right: -958px;
+  top: -52px;
+
+  @media (max-width: 1080px) {
+    right: -774px;
+  }
+
+  @media (max-width: 900px) {
+    display: none;
+  }
+}
+
+.calc__ipad-number {
+  color: white;
+  font-size: 58px;
+  position: absolute;
+  transform: rotate(333deg);
+  top: 101px;
+  left: 169px;
 }

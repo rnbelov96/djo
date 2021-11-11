@@ -119,6 +119,7 @@
             <div class="line-form__policy-box">
               <input
                 type="checkbox"
+                checked
                 id="policy-check"
                 class="line-form__input-check visually-hidden"
               />
@@ -237,7 +238,7 @@
       <section class="market">
         <div class="container">
           <h2 class="market__title">
-            <span>Рынок доставки бьёт рекорды </span> <br />
+            <span>Рынок доставки бьёт рекорды</span> <br />
             третий год подряд
           </h2>
           <div class="market__content">
@@ -274,7 +275,7 @@
               рынок.
             </p>
             <div class="button__wrapper button__wrapper_market">
-              <button class="button js-present">Получить информацию</button>
+              <button class="button js-info">Получить информацию</button>
             </div>
           </div>
         </div>
@@ -324,8 +325,8 @@
         <div class="container">
           <div class="menu__content">
             <h2 class="menu__title">
-              Меню, где <br />
-              <span> каждый найдёт еду на свой вкус </span> <br />
+              <b>Меню, где</b> <br />
+              <span> каждый найдёт еду на свой вкус</span> <br />
               и настроение
             </h2>
             <p class="menu__text">
@@ -435,6 +436,7 @@
             <div class="line-form__policy-box">
               <input
                 type="checkbox"
+                checked
                 id="policy-check-1"
                 class="line-form__input-check visually-hidden"
               />
@@ -884,35 +886,25 @@
               <input
                 type="range"
                 min="1"
-                max="5"
+                max="3"
                 step="1"
                 class="calc__input js-range js-points-range"
               />
               <div class="calc__endpoints js-points-endpoints">
-                <div class="calc__endpoint visually-hidden">
+                <div class="calc__endpoint calc__endpoint_small">
                   1
                   <div
                     class="calc__endpoint-dot calc__endpoint-dot_active"
                   ></div>
                 </div>
-                <div class="calc__endpoint">
+                <div class="calc__endpoint calc__endpoint_small">
                   2
                   <div
                     class="calc__endpoint-dot calc__endpoint-dot_active"
                   ></div>
                 </div>
-                <div class="calc__endpoint">
+                <div class="calc__endpoint calc__endpoint_small">
                   3
-                  <div
-                    class="calc__endpoint-dot calc__endpoint-dot_active"
-                  ></div>
-                </div>
-                <div class="calc__endpoint">
-                  4
-                  <div class="calc__endpoint-dot calc__endpoint-dot"></div>
-                </div>
-                <div class="calc__endpoint visually-hidden">
-                  5
                   <div class="calc__endpoint-dot"></div>
                 </div>
               </div>
@@ -971,16 +963,16 @@
                 </div>
               </div>
             </div>
-            <div class="calc__input-box">
+            <div class="calc__input-box js-cal-del-input-box">
               <p class="calc__input-label">Заказов в месяц</p>
               <input
                 type="range"
                 min="1100"
                 max="1400"
                 step="50"
-                class="calc__input js-range js-orders-range"
+                class="calc__input js-range js-orders-cal-del-range"
               />
-              <div class="calc__endpoints js-orders-endpoints">
+              <div class="calc__endpoints js-orders-cal-del-endpoints">
                 <div class="calc__endpoint visually-hidden">
                   1100
                   <div
@@ -1019,10 +1011,51 @@
                 </div>
               </div>
             </div>
+            <div class="calc__input-box visually-hidden js-del-input-box">
+              <p class="calc__input-label">Заказов в месяц</p>
+              <input
+                type="range"
+                min="900"
+                max="1100"
+                step="50"
+                class="calc__input js-range js-orders-del-range"
+              />
+              <div class="calc__endpoints js-orders-del-endpoints">
+                <div class="calc__endpoint visually-hidden">
+                  900
+                  <div
+                    class="calc__endpoint-dot calc__endpoint-dot_active"
+                  ></div>
+                </div>
+                <div class="calc__endpoint">
+                  950
+                  <div
+                    class="calc__endpoint-dot calc__endpoint-dot_active"
+                  ></div>
+                </div>
+                <div class="calc__endpoint">
+                  1000
+                  <div
+                    class="calc__endpoint-dot calc__endpoint-dot_active"
+                  ></div>
+                </div>
+                <div class="calc__endpoint">
+                  1050
+                  <div class="calc__endpoint-dot"></div>
+                </div>
+                <div class="calc__endpoint visually-hidden">
+                  1100
+                  <div class="calc__endpoint-dot calc__endpoint-dot"></div>
+                </div>
+              </div>
+            </div>
             <p class="calc__result">
               Прибыль за месяц:
               <span><span class="js-calc-result">193 720</span> ₽</span>
             </p>
+            <div class="calc__ipad-box">
+              <p class="calc__ipad-number js-calc-result">123 123</p>
+            </div>
           </div>
         </div>
       </section>
@@ -1149,6 +1182,7 @@
             <div class="line-form__policy-box">
               <input
                 type="checkbox"
+                checked
                 id="policy-check-2"
                 class="line-form__input-check visually-hidden"
               />
@@ -1405,7 +1439,10 @@
                     height="52"
                     alt="Логотип"
                     class="footer__link-icon"
-                  /><a href="" target="_blank" class="footer__link"
+                  /><a
+                    href="https://djo125.ru"
+                    target="_blank"
+                    class="footer__link"
                     >Официальный сайт</a
                   >
                 </div>
@@ -1416,7 +1453,10 @@
                     height="52"
                     alt="Логотип"
                     class="footer__link-icon"
-                  /><a href="" target="_blank" class="footer__link"
+                  /><a
+                    href="https://www.instagram.com/djo_uss/"
+                    target="_blank"
+                    class="footer__link"
                     >Instagram</a
                   >
                 </div>
@@ -1478,7 +1518,68 @@
                 />
               </div>
             </div>
-            <div class="button__wrapper button__wrapper_modal-form">
+            <div class="city__policy city__policy_modal">
+              <input
+                type="checkbox"
+                checked
+                id="policy-check-5"
+                class="line-form__input-check visually-hidden"
+              />
+              <label class="line-form__check-label" for="policy-check-5">
+                <svg
+                  width="35"
+                  height="35"
+                  version="1.1"
+                  id="Слой_1"
+                  xmlns:x="&ns_extend;"
+                  xmlns:i="&ns_ai;"
+                  xmlns:graph="&ns_graphs;"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 45 47"
+                  style="enable-background: new 0 0 45 47"
+                  xml:space="preserve"
+                >
+                  <style type="text/css">
+                    .st0 {
+                      fill: #999999;
+                    }
+                    .st1 {
+                      fill: none;
+                      stroke: transparent;
+                      stroke-width: 3;
+                      stroke-linecap: square;
+                      stroke-miterlimit: 10;
+                    }
+                  </style>
+                  <g i:extraneous="self">
+                    <g>
+                      <path
+                        class="st0"
+                        d="M9.61,8.5h25.79c1.16,0,2.11,0.94,2.11,2.11v25.79c0,1.16-0.94,2.11-2.11,2.11H9.61
+        c-1.16,0-2.11-0.94-2.11-2.11V10.61C7.5,9.44,8.44,8.5,9.61,8.5z"
+                      />
+                      <polyline
+                        class="st1"
+                        points="13.93,24.08 18.53,30.22 30.8,16.42 			"
+                      />
+                    </g>
+                  </g>
+                </svg>
+              </label>
+              <p class="city__policy-text">
+                Я подтверждаю, что ознакомлен и даю согласие на обработку
+                персональных данных на условиях и для целей, определяемых
+                <button class="js-policy">Политикой конфиденциальности</button>
+              </p>
+            </div>
+            <div
+              class="
+                button__wrapper button__wrapper_modal-form button__wrapper_modal
+              "
+            >
               <button type="submit" class="button js-modal-form-btn">
                 Получить презентацию
               </button>
@@ -1515,8 +1616,9 @@
           <li class="priv-policy__item">
             2. Настоящая политика Оператора в отношении обработки персональных
             данных (далее – Политика) применяется ко всей информации, которую
-            Оператор может получить о посетителях веб-сайта компании «Hot
-            Chiken».
+            Оператор может получить о посетителях веб-сайта компании с торговым
+            названием «Джо» ®, вледелецем который является ИП Паленко Евгений
+            Олегович.
           </li>
         </ol>
 
@@ -1642,9 +1744,8 @@
             новых продуктах и услугах, специальных предложениях и различных
             событиях. Пользователь всегда может отказаться от получения
             информационных сообщений, направив Оператору письмо на адрес
-            электронной почты с доменом hotchicken18@yandex.ru с пометкой «Отказ
-            от уведомлений о новых продуктах и услугах и специальных
-            предложениях».
+            электронной почты с доменом 89532110311@mail.ru с пометкой «Отказ от
+            уведомлений о новых продуктах и услугах и специальных предложениях».
           </li>
           <li class="priv-policy__item">
             3. Обезличенные данные Пользователей, собираемые с помощью сервисов

@@ -12,6 +12,10 @@ const modalFormInfoList = [
     title: 'Оставьте заявку на презентацию франшизы и финансовую модель',
     button: 'Получить презентацию',
   },
+  {
+    title: 'Получите подробную информацию о франшизе',
+    button: 'Получить информацию',
+  },
 ];
 
 const closeModal = (modalEl: HTMLDivElement) => {
@@ -88,6 +92,16 @@ presentBtnElList.forEach(btn => {
     openedModalList.unshift(formModalEl);
     formTitleEl.textContent = modalFormInfoList[1].title;
     formBtnEl.textContent = modalFormInfoList[1].button;
+    openModal(formModalEl as HTMLDivElement);
+  });
+});
+
+const infoBtnElList = document.querySelectorAll('.js-info');
+infoBtnElList.forEach(btn => {
+  btn.addEventListener('click', () => {
+    openedModalList.unshift(formModalEl);
+    formTitleEl.textContent = modalFormInfoList[2].title;
+    formBtnEl.textContent = modalFormInfoList[2].button;
     openModal(formModalEl as HTMLDivElement);
   });
 });

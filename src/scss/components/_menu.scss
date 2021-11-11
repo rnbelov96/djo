@@ -43,6 +43,16 @@
   @include title;
   margin-bottom: 27px;
 
+  b {
+    font-weight: normal;
+    display: inline-block;
+    margin-bottom: 8px;
+
+    @media (max-width: 650px) {
+      margin-bottom: 6px;
+    }
+  }
+
   @media (max-width: 767px) {
     max-width: 100%;
 
@@ -54,12 +64,6 @@
   span {
     color: white;
     background-color: black;
-    margin-top: 8px;
-    display: inline-block;
-
-    @media (max-width: 650px) {
-      margin-top: 6px;
-    }
   }
 }
 
